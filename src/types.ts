@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export interface AppConfigPayload {
   hasAdminAuth: boolean;
@@ -75,6 +75,7 @@ export interface AskWidgetProps {
   className?: string;
   fetchAppConfig?: boolean;
   initialQuestion?: string;
+  inputStyle?: CSSProperties;
   labels?: AskWidgetLabels;
   onError?: (error: Error, question: string) => void;
   onResult?: (result: AskResult) => void;
@@ -82,7 +83,9 @@ export interface AskWidgetProps {
   showCitations?: boolean;
   showStaleWarnings?: boolean;
   sourceId?: string;
+  style?: CSSProperties;
   targetId?: string;
+  theme?: "dark" | "light";
   topK?: number;
   turnstileAction?: string;
   turnstileSiteKey?: string | null;

@@ -10,6 +10,7 @@ export function AskWidget({
   className,
   fetchAppConfig: shouldFetchAppConfig = true,
   initialQuestion = "",
+  inputStyle,
   labels,
   onError,
   onResult,
@@ -17,7 +18,9 @@ export function AskWidget({
   showCitations = false,
   showStaleWarnings = true,
   sourceId,
+  style,
   targetId,
+  theme,
   topK,
   turnstileAction,
   turnstileSiteKey
@@ -135,7 +138,7 @@ export function AskWidget({
   }
 
   return (
-    <section className={rootClassName}>
+    <section className={rootClassName} data-theme={theme} style={style}>
       {labels?.title ? <header className="torency-ask__header">{labels.title}</header> : null}
 
       <div className="torency-ask__thread" ref={threadRef}>
@@ -191,6 +194,7 @@ export function AskWidget({
             }}
             placeholder={labels?.inputPlaceholder ?? "Ask a question"}
             rows={1}
+            style={inputStyle}
           />
           <button type="submit" className="torency-ask__send" disabled={!canSubmit} aria-label={labels?.sendLabel ?? "Send"}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
