@@ -174,7 +174,11 @@ export function AskWidget({
 
       <div id={`${widgetId}-composer`} className="torency-ask__composer">
         {!adminBypassEnabled ? (
-          <div id={`${widgetId}-turnstile`} className={`torency-ask__turnstile${turnstile.token ? " torency-ask__turnstile--verified" : ""}`}>
+          <div
+            id={`${widgetId}-turnstile`}
+            className={`torency-ask__turnstile${turnstile.token ? " torency-ask__turnstile--verified" : ""}`}
+            hidden={Boolean(turnstile.token)}
+          >
             <div id={`${widgetId}-turnstile-label`} className="torency-ask__turnstile-label">{labels?.turnstileLabel ?? "Turnstile"}</div>
             {configError ? <p id={`${widgetId}-config-error`} className="torency-ask__error">{configError}</p> : null}
             {resolvedTurnstileSiteKey ? (
