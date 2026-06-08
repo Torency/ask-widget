@@ -1,6 +1,6 @@
 {
   "name": "@torency/ask-widget",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Embeddable React Ask widget for Archeo/memory backends.",
   "type": "module",
   "main": "./dist/torency-ask-widget.umd.cjs",
@@ -20,7 +20,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json && vite build",
-    "check": "tsc -p tsconfig.json --noEmit"
+    "check": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0",
