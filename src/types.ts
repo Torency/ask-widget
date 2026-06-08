@@ -74,6 +74,7 @@ export interface AskWidgetProps {
   backendUrl: string;
   className?: string;
   fetchAppConfig?: boolean;
+  id?: string;
   initialQuestion?: string;
   inputStyle?: CSSProperties;
   labels?: AskWidgetLabels;

@@ -23,6 +23,7 @@
   display: grid;
   font-family: inherit;
   gap: 12px;
+  margin-inline: auto;
   max-width: 760px;
   min-height: 420px;
   padding: 14px;
@@ -30,7 +31,7 @@
   width: 100%;
 }
 
-.dark .torency-ask,
+.dark .torency-ask:not([data-theme="light"]),
 .torency-ask[data-theme="dark"] {
   --torency-ask-bg: rgba(31, 41, 55, 0.3);
   --torency-ask-border: #374151;
@@ -196,6 +197,7 @@
 
 .torency-ask__turnstile--verified {
   border-color: rgba(37, 99, 235, 0.35);
+  display: none;
 }
 
 .torency-ask__turnstile-label {

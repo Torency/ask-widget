@@ -32,6 +32,7 @@ export function CasciiAsk() {
 ## Props
 
 - `backendUrl`: origin that exposes `/app-config` and `/ask`.
+- `id`: optional stable ID prefix for the widget and all of its rendered elements.
 - `sourceId`, `repoId`, `targetId`: optional backend retrieval target.
 - `topK`: optional retrieval size.
 - `turnstileSiteKey`: optional explicit Cloudflare Turnstile site key. If omitted, the widget fetches `/app-config`.
